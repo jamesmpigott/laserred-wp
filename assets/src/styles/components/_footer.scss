@@ -1,0 +1,125 @@
+// Footer
+
+.footer{
+	max-width: 100%;
+	width: 100%;
+
+	.sub-footer{
+		.inner-wrap{
+			max-width: 1400px;
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 20px 0;
+		}
+
+		background-color: $subfooter-bg;
+		font-size: 13px;
+		color: $white;
+		
+		#copyright{
+			font-family: $montserrat;
+
+			a{
+				color: $white;
+			}
+		}
+
+		#checkout-lr-logo{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.checkout{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				.secure-checkout{
+					margin-right: 20px;
+				}
+				
+				padding-right: 30px;
+				border-right:  1px solid $header-sep;
+			}
+
+			.laser-red{
+				margin-left: 30px;
+			}
+		}
+	}
+
+	.main{
+		width: 100%;
+		background-color: $header-bg;
+
+		.inner-wrap{
+			max-width: 1240px;
+			width: 100%;
+			margin: 0 auto;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 40px 0;
+			
+			.footer-col{
+				.footer-title{
+					font-family: $montserrat;
+					font-weight: 700;
+					font-style: italic;
+					font-size: 19px;
+					text-transform: uppercase;
+					padding-left: 20px;
+					position: relative;
+					color: $white;
+
+					&:before{
+						content: '';
+						display: block;
+						height: 20px;
+						width: 2px;
+						background-color: $header-active-nav;
+						position: absolute;
+						left: 0;
+						top: 0;
+						transform: rotate(33deg);
+						transform-origin: bottom left;
+					}				
+				}
+
+				.footer-items{
+					display: flex;
+					flex-direction: column;
+					margin-left: 20px;
+					margin-top: 25px;
+
+					.footer-item{
+						color: $white;
+						font-family: $montserrat;
+						font-weight: 400;
+						font-size: 16px;
+						margin-bottom: 10px;
+
+						.fa{
+							color: $header-active-nav;
+							margin-right: 10px;
+						}
+
+						a{
+							color: $white;
+						}
+					}
+				}
+
+				&:first-child{
+					margin-right: 225px;
+				}
+			}
+
+		}
+	}
+}
