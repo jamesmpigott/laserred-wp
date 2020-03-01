@@ -1,0 +1,16 @@
+@import 'components/_components';
+@import 'page-specifics/_page-specifics';
+@import 'partial/_partial';
+@import '_reset';
+
+body{
+	.content-wrapper{
+		padding-top: 128px;
+	}
+
+	&.admin-bar{
+		.header{
+			top: 32px;
+		}
+	}
+}
