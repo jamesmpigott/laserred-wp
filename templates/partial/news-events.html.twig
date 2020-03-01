@@ -1,0 +1,51 @@
+<section class="news-events">
+	<div class="layout-wrapper">
+		<div class="events">
+			<div class="title-wrap">
+				<h4 class="title">NEXT EVENT</h4>
+				<a href="">VIEW ALL EVENTS <img src="{{theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
+			</div>
+			<div class="event" style="background-image: url('{{theme.path}}/assets/images/event.jpg')">
+				<div class="overlay">
+					<div class="date">
+						<i class="fa fa-calendar"></i>
+						<span>12 July - 14 July 2019</span>
+					</div>
+					<div class="location-name">
+						<div class="location">
+							<i class="fas fa-map-marker-alt"></i>
+							<span>A Location</span>
+						</div>
+						<h3 class="name">Lorem ipsum dolor sit amet.</h3>
+					</div>
+					<a href="" class="arrow">
+						<img src="{{theme.path}}/assets/images/arrow-right.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="news">
+			<div class="title-wrap">
+				<h4 class="title">LATEST NEWS</h4>
+				<a href="">VIEW ALL NEWS <img src="{{theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
+			</div>
+			<div class="news-items">
+				{% for post in news %}
+					<div class="news-item">
+						<div class="image" style="background-image:url('{{post.thumbnail.src}}')" ></div>
+						<div class="post-meta">
+							<div class="date">
+								<i class="fa fa-calendar"></i>
+								<span>{{ post.date|date('j F Y') }}</span>
+							</div>
+							<h4 class="title">{{ post.title }}</h4>
+							<a href="{{ post.link }}" class="link">FULL STORY 	<img src="{{theme.path}}/assets/images/news-arrow.png" alt="">
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+
+		</div>
+	</div>
+</section>
