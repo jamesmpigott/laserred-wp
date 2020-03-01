@@ -1,0 +1,113 @@
+// Header
+.header{
+	max-width: 100%;
+	width: 100%;
+	background-color: $header-bg;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+
+	.layout-wrapper{
+		padding: 20px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo{
+		margin-left: 70px;
+	}
+
+	.nav{
+		display: flex;
+		flex-direction: row;
+		
+		.menu-item{
+			position: relative;
+			.menu-item-link{
+				color: $white;
+				font-family: $montserrat;
+				font-style: italic;
+				font-weight: 700;
+				margin: 20px;
+				font-size: 19px;
+				z-index: 2;
+				background-color: $header-bg;
+				position: relative;
+				transition: color .15s linear;
+
+				&:hover{
+					color: $header-active-nav;
+				}
+			}
+
+			&.current{
+				.active-line{
+					position: absolute;
+					width: 3px;
+					height: 63px;
+					background-color: $header-active-nav;
+					transform: rotate(33deg);
+					transform-origin: center;
+					top: -20px;
+					right: calc(50% - ( 3px/2 ));
+					z-index: 1;
+				}
+			}
+		}
+		
+	}
+
+	.search-cart{
+		color:$white;
+		margin-right: 35px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		.fa,
+		.far{
+			font-size: 24px;
+		}
+
+		.woocommerce-cart{
+			padding: 10px 30px;
+			border-left: 1px solid $header-sep;
+			border-right: 1px solid $header-sep;
+			
+			.fa-shopping-basket{
+				position: relative;
+
+				.cart-item-count{
+					position: absolute;
+					top: -7px;
+					right: -8px;
+					font-size: 12px;
+					font-family: $montserrat;
+					font-weight: 700;
+					color: $white;
+					padding: 5px 6px;
+					background-color: $light-blue;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.cart-item-total-price{
+			font-size: 16px;
+			font-family: $montserrat;
+			font-weight: 700;
+			margin-left: 18px;
+		}
+
+		.fa-search{
+			padding-right: 30px;
+		}
+
+		.fa-user{
+			padding-left: 30px;
+		}
+
+	}
+}

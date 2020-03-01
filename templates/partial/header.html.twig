@@ -1,0 +1,29 @@
+<div class="layout-wrapper">
+	<div class="logo">
+		<img src="{{theme.path}}/assets/images/logo.png" alt="{{ site.name }}">
+	</div>
+	<div class="nav">
+		{% for item in menu.items %}
+			{% if item.current %}
+				<div class="menu-item current">
+					<div class="active-line"></div>
+					<a href="{{item.link}}" class="menu-item-link">{{item.title}}</a>
+				</div>
+			{% else %}
+				<div class="menu-item">
+					<a href="{{item.link}}" class="menu-item-link">{{item.title}}</a>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="search-cart">
+		<i class="fa fa-search"></i>
+		<div class="woocommerce-cart">
+			<i class="fa fa-shopping-basket">
+				<span class="cart-item-count">0</span>
+			</i>
+			<span class="cart-item-total-price">£0.00</span>
+		</div>
+		<i class="far fa-user"></i>
+	</div>
+</div>
