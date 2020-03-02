@@ -1,0 +1,127 @@
+.testimonials{
+	padding: 145px 0;
+
+	.layout-wrapper{
+		max-width: 1410px;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 340px;
+			bottom: 54px;
+			right: 50px;
+			border: 1px solid #a8b7c5;
+			z-index: -1;
+		}
+
+		.title{
+			color: $header-bg;
+			font-size: 36px;
+			font-weight: 700;
+			font-family: $montserrat;
+			text-transform: uppercase;
+			margin-top: 0;
+			background-color: $white;
+			z-index: 1;
+			display: inline-block;
+			padding-right: 35px;
+		}
+
+		.subtitle{
+			color: $header-active-nav;
+			font-size: 15px;
+			text-transform: uppercase;
+			font-family: $montserrat;
+			font-weight: 700;
+			margin-bottom: 25px;
+		}
+
+		.testimonial-wrapper{
+			padding: 50px;
+			position: relative;
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			box-shadow: 10px 10px 10px 0 rgba(24,32,46,.2);
+	
+			&:before{
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($header-active-nav, .9);
+				z-index: 0;
+			}
+
+			.testimonial,
+			img{
+				z-index: 1;
+			}
+
+			.testimonial{
+				position: relative;
+				font-family: $montserrat;
+				text-align: left;
+				color: $white;
+				display: flex;
+				flex-direction: column;
+				max-width: 495px;
+				width: 100%;
+
+				.content{
+					font-size: 22px;
+					font-style: italic;
+					font-weight: 400;
+					margin-bottom: 25px;
+				}
+
+				.author{
+					font-weight: 700;
+					font-size: 21px;
+					margin-bottom: 10px;
+				}
+
+				.description{
+					font-size: 15px;
+					font-weight: 300;
+				}
+
+				a{
+					color: inherit;
+				}
+
+				&:first-child{
+					padding-right: 45px;
+				}
+
+				&:nth-child(2){
+
+					.content{
+						padding-left: 50px;
+						border-left: 1px solid $white;
+					}
+
+					.author, 
+					.description{
+						padding-left: 50px;
+					}
+				}
+			}
+
+			img{
+				align-self: flex-start;
+				margin-left: 55px;
+			}
+		}
+	}
+}
