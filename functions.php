@@ -23,7 +23,7 @@
 			Get Shortcodes
 		====================*/
 		public function get_shortcodes(){
-			foreach(glob(get_stylesheet_directory() . "/shortcodes/*/*.php") as $file){
+			foreach(glob(get_stylesheet_directory() . "/shortcodes/*.php") as $file){
 				require $file;
 			}
 		}
