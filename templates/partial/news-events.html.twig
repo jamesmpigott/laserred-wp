@@ -5,24 +5,26 @@
 				<h4 class="title">NEXT EVENT</h4>
 				<a href="">VIEW ALL EVENTS <img src="{{theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
 			</div>
-			<div class="event" style="background-image: url('{{theme.path}}/assets/images/event.jpg')">
-				<div class="overlay">
-					<div class="date">
-						<i class="fa fa-calendar"></i>
-						<span>12 July - 14 July 2019</span>
-					</div>
-					<div class="location-name">
-						<div class="location">
-							<i class="fas fa-map-marker-alt"></i>
-							<span>A Location</span>
+			{% for event in events %}
+				<div class="event" style="background-image: url('{{event.thumbnail.src}}')">
+					<div class="overlay">
+						<div class="date">
+							<i class="fa fa-calendar"></i>
+							<span>{{event.start_date|date('y F')}} - {{event.end_date|date('j F Y')}}</span>
 						</div>
-						<h3 class="name">Lorem ipsum dolor sit amet.</h3>
+						<div class="location-name">
+							<div class="location">
+								<i class="fas fa-map-marker-alt"></i>
+								<span>{{event.location}}</span>
+							</div>
+							<h3 class="name">{{event.title}}</h3>
+						</div>
+						<a href="" class="arrow">
+							<img src="{{theme.path}}/assets/images/arrow-right.png" alt="">
+						</a>
 					</div>
-					<a href="" class="arrow">
-						<img src="{{theme.path}}/assets/images/arrow-right.png" alt="">
-					</a>
 				</div>
-			</div>
+			{% endfor %}
 		</div>
 		<div class="news">
 			<div class="title-wrap">

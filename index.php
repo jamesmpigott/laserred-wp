@@ -18,5 +18,25 @@
 		'orderby' => 'meta_value_num',
 	];
 	$context['products'] = Timber::get_posts($productsArgs);
+
+	$currentDate = date('Y-m-d H:i:s');
+	$eventArgs = [
+		'post_type' => 'events',
+		'posts_per_page' => 1,
+		'meta_key' => 'start_date',
+		'orderby' => 'start_date',
+		'order' => 'ASC',
+		'meta_query' => [
+			[
+				'key' => 'start_date',
+				'value' => $currentDate,
+				'compare' => '>=',
+				'type' => 'DATE',
+			],
+		],
+	];
+
+	$context['events'] = Timber::get_posts($eventArgs);
+	
 	Timber::render('pages/home.html.twig', $context);
 ?>
