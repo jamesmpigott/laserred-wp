@@ -2,14 +2,14 @@
 	<div class="layout-wrapper">
 		<div class="title-wrapper">
 			<h3 class="title">TOP SELLING PRODUCTS</h3>
-			<a href="">VIEW ALL PRODUCTS <img src="{{theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
+			<a href="">VIEW ALL PRODUCTS <img src="{{context.theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
 		</div>
 		<div class="products">
-			{% for product in products %}
+			{% for product in atts.products %}
 				<div class="product">
 					<div class="image" style="background-image:url('{{product.thumbnail.src}}');">
 						<div class="category">
-							<img src="{{theme.path}}/assets/images/bmw.png" alt="">
+							<img src="{{context.theme.path}}/assets/images/bmw.png" alt="">
 						</div>
 					</div>
 					<div class="meta">
@@ -17,7 +17,7 @@
 					</div>
 					<div class="price-bar">
 						<span class="price">£264.00</span>
-						<img src="{{theme.path}}/assets/images/news-arrow-white.png" alt="">
+						<img src="{{context.theme.path}}/assets/images/news-arrow-white.png" alt="">
 					</div>
 				</div>
 			{% endfor %}
