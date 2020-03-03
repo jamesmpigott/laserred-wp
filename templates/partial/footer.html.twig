@@ -17,43 +17,31 @@
 			<div class="footer-col">
 				<h4 class="footer-title">COMPANY</h4>
 				<div class="footer-items">
-					<div class="footer-item">
-						<a href="">Delivery &amp; Returns</a>
-					</div>
-					<div class="footer-item">
-						<a href="">Terms &amp; Conditions</a>
-					</div>
-					<div class="footer-item">
-						<a href="">Privacy Policy</a>
-					</div>
+					{% for item in footer.company.items %}
+						<div class="footer-item">
+							<a href="{{item.link}}">{{item.title}}</a>
+						</div>
+					{% endfor %}
 				</div>
 			</div>
 			<div class="footer-col">
 				<h4 class="footer-title">ACCOUNT &amp; ORDERS</h4>
 				<div class="footer-items">
-					<div class="footer-item">
-						<a href="">My Account</a>
-					</div>
-					<div class="footer-item">
-						<a href="">Shopping Cart</a>
-					</div>
-					<div class="footer-item">
-						<a href="">Contact Us</a>
-					</div>
+					{% for item in footer.account.items %}
+						<div class="footer-item">
+							<a href="{{item.link}}">{{item.title}}</a>
+						</div>
+					{% endfor %}
 				</div>
 			</div>
 			<div class="footer-col">
 				<h4 class="footer-title">USEFUL LINKS</h4>
 				<div class="footer-items">
-					<div class="footer-item">
-						<a href="">About Us</a>
-					</div>
-					<div class="footer-item">
-						<a href="">Services</a>
-					</div>
-					<div class="footer-item">
-						<a href="">Events</a>
-					</div>
+					{% for item in footer.usefulLinks.items %}
+						<div class="footer-item">
+							<a href="{{item.link}}">{{item.title}}</a>
+						</div>
+					{% endfor %}
 				</div>
 			</div>
 		</div>

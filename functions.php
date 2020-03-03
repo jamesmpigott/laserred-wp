@@ -69,7 +69,11 @@
 		}
 
 		public function add_to_context($context){
-			$context['menu'] = new Timber\Menu('main-nav');
+			$context['menu'] = new Timber\Menu('header');
+			$context['footer']['company'] = new Timber\Menu('company');
+			$context['footer']['account'] = new Timber\Menu('account');
+			$context['footer']['usefulLinks'] = new Timber\Menu('useful-links');
+
 			return $context;
 		}
 
@@ -80,7 +84,10 @@
 		public function add_menu_to_appearance_admin(){
 			register_nav_menus(
 				[
-        			'header' => 'Header menu', 
+        			'header' => 'Header menu',
+        			'company' => 'Footer - Company',
+        			'account' => 'Footer - Account & Orders',
+        			'useful-links' => 'Footer - Useful Links',
 				]
 			);
 		}
