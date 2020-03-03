@@ -3,9 +3,9 @@
 		<div class="events">
 			<div class="title-wrap">
 				<h4 class="title">NEXT EVENT</h4>
-				<a href="">VIEW ALL EVENTS <img src="{{theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
+				<a href="">VIEW ALL EVENTS <img src="{{context.theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
 			</div>
-			{% for event in events %}
+			{% for event in posts.events %}
 				<div class="event" style="background-image: url('{{event.thumbnail.src}}')">
 					<div class="overlay">
 						<div class="date">
@@ -20,7 +20,7 @@
 							<h3 class="name">{{event.title}}</h3>
 						</div>
 						<a href="" class="arrow">
-							<img src="{{theme.path}}/assets/images/arrow-right.png" alt="">
+							<img src="{{context.theme.path}}/assets/images/arrow-right.png" alt="">
 						</a>
 					</div>
 				</div>
@@ -29,10 +29,10 @@
 		<div class="news">
 			<div class="title-wrap">
 				<h4 class="title">LATEST NEWS</h4>
-				<a href="">VIEW ALL NEWS <img src="{{theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
+				<a href="">VIEW ALL NEWS <img src="{{context.theme.path}}/assets/images/news-arrow-blue.png" alt=""></a>
 			</div>
 			<div class="news-items">
-				{% for post in news %}
+				{% for post in posts.news %}
 					<div class="news-item">
 						<div class="image" style="background-image:url('{{post.thumbnail.src}}')" ></div>
 						<div class="post-meta">
@@ -41,7 +41,7 @@
 								<span>{{ post.date|date('j F Y') }}</span>
 							</div>
 							<h4 class="title">{{ post.title }}</h4>
-							<a href="{{ post.link }}" class="link">FULL STORY 	<img src="{{theme.path}}/assets/images/news-arrow.png" alt="">
+							<a href="{{ post.link }}" class="link">FULL STORY 	<img src="{{context.theme.path}}/assets/images/news-arrow.png" alt="">
 							</a>
 						</div>
 					</div>
