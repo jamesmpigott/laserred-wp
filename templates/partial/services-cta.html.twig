@@ -1,13 +1,13 @@
-<section class="services-cta" style="background-image: url('{{theme.path}}/assets/images/services-cta.jpg');">
+<section class="services-cta" style="background-image: url('{{ context.theme.path }}/assets/images/services-cta.jpg');">
 	<div class="layout-wrapper">
 		<div class="left">
-			<span class="subtitle">WE DON'T JUST SELL PRODUCTS...</span>
-			<h3 class="title">WE ALSO OFFER BIKE PREPARATION TO HELP YOU ON YOUR ADVENTURE</h3>
+			<span class="subtitle">{{ atts.subtitle }}</span>
+			<h3 class="title">{{ atts.title }}</h3>
 		</div>
 		<div class="right">
 			<a href="tel:01472123456" class="tel"><i class="fa fa-phone"></i> Call Us On (01472) 123456</a>
 			<a href="mailto:enquires@laser.red" class="email"><i class="fa fa-envelope"></i> enquires@laser.red</a>
-			<a href="" class="button">Lorem ipsum dolor sit <img src="{{theme.path}}/assets/images/news-arrow-white.png" alt=""></a>
+			<a href="{{ atts.button_link }}" class="button">{{ atts.button_text }} <img src="{{ context.theme.path }}/assets/images/news-arrow-white.png" alt=""></a>
 		</div>
 	</div>
 </section>
