@@ -1,0 +1,11 @@
+<section class="intro-content">
+	<div class="layout-wrapper">
+		<div class="image" style="background-image:url('{{atts.imageContent.src}}');"></div>
+		<div class="content">
+			<h3 class="subtitle">{{atts.subtitle}}</h3>
+			<h2 class="title">{{atts.title}}</h2>
+			<div class="text-content">{{atts.content|raw}}</div>
+			<a href="{{ atts.button_link }}" class="button">{{ atts.button_text }} <img src="{{ context.theme.path }}/assets/images/news-arrow-white.png" alt=""></a>
+		</div>
+	</div>
+</section>
